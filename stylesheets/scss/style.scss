@@ -258,4 +258,48 @@ main {
     }
 
 
+    // contact section ======================
+     #contact {
+        @include parallax();
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        height: 45vh;
+        justify-content: center;
+        // background-image: url("img/purple-fireworks-effect-1280x853.jpg");
+        background-image: url("img/contact-img.jpg");
+
+        h2 {
+            color: #fff;
+        }
+    
+        .contact-icons {
+            @include flex-box-row;
+            flex-wrap: wrap;
+            // justify-content: space-around;
+
+            font-size: 5rem;
+            color: #fff;
+
+            .contact-icon {
+                margin-top: 3rem;
+
+                &:hover {
+                    transform: scale(1.3, 1.3);
+                }
+            }
+
+            a {
+                padding: 0rem 2rem;
+                color: #fff;
+                text-decoration: none;
+            }
+            &:visited {
+                color: #fff;
+            }
+        }
+    }
+    
 }
