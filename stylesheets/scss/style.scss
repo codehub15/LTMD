@@ -191,7 +191,6 @@ main {
         }
     }
 
-
     // gallery section ======================
     #gallery {
         max-height: 70%;
@@ -224,7 +223,6 @@ main {
             }
         }
     }
-
 
     // event section ======================
     #events {
@@ -260,15 +258,9 @@ main {
 
     // contact section ======================
      #contact {
-        @include parallax();
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
         height: 45vh;
+        @include parallax();
         justify-content: center;
-        // background-image: url("img/purple-fireworks-effect-1280x853.jpg");
         background-image: url("img/contact-img.jpg");
 
         h2 {
@@ -278,8 +270,6 @@ main {
         .contact-icons {
             @include flex-box-row;
             flex-wrap: wrap;
-            // justify-content: space-around;
-
             font-size: 5rem;
             color: #fff;
 
@@ -301,5 +291,18 @@ main {
             }
         }
     }
-    
+
+    // reservation section ======================
+    #reservation {
+        @include parallax();
+        height: 30vh;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        background-color: rgb(244, 239, 252);
+
+        .bold {
+            font-weight: bold;
+        }
+    }
+
 }
