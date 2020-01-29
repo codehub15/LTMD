@@ -48,6 +48,48 @@ main {
 
     }
 
+    // spotlight section ======================
+    #spotlight {
+        height: 50%;
+        @include parallax();
+
+        justify-content: space-around;
+        background-color: rgb(253, 251, 251);
+        background-image: url("./img/light-img.png");
+
+        
+        div {
+            @include flex-box-row;
+            flex-wrap: wrap;
+            margin: 1rem 2rem;
+            text-align: center;
+            color: #fff;
+
+            iframe {
+                box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.25);
+
+                &:hover {
+                    transform: scale(1.1, 1.1);
+                    // box-shadow: 0px 2px 10px 1px rgba(51, 12, 83, 0.8);
+                    // box-shadow: 0px 2px 10px 1px rgba(20, 109, 112, 0.8);
+                }
+
+                // media query for iframe
+                @media (max-width: 600px) {
+                    width: 100%;
+                }
+            }
+
+            // media query for div which includes iframes
+            @media (max-width: 569px) {
+                margin: 0.5rem;
+                padding: 0.5rem;
+            }
+        }
+    }
+
+
+
 
 }
 
