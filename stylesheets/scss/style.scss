@@ -1,6 +1,6 @@
 @import 'library';
 
-// general
+// general ===================================
 * {
     margin: 0;
     padding: 0;
@@ -10,90 +10,7 @@ html {
     font-size: 100%;
 }
 
-// main ====================================
-main {
-    .box {
-        @include flex-box-column;
-        padding: 2rem 1rem;
-        align-items: center;
-        @include parallax();
-    }
-
-    // welcome section ======================
-    #welcome {
-        height: 90vh;
-        @include parallax();
-
-        background-color: rgb(35, 8, 85);
-        background-image: url("./img/gallery-img-4.png");
-        color: #fff;
-
-        h2 {
-            margin-top: 10rem;
-            font-size: 5em;
-            text-transform: uppercase;
-            color: #fff;
-        }
-
-        h3 {
-            font-size: 2.5em;
-            text-align: center;
-        }
-
-        #info {
-            max-width: 43%;
-            font-weight: bold;
-            text-align: center;
-        }
-
-    }
-
-    // spotlight section ======================
-    #spotlight {
-        height: 50%;
-        @include parallax();
-
-        justify-content: space-around;
-        background-color: rgb(253, 251, 251);
-        background-image: url("./img/light-img.png");
-
-        
-        div {
-            @include flex-box-row;
-            flex-wrap: wrap;
-            margin: 1rem 2rem;
-            text-align: center;
-            color: #fff;
-
-            iframe {
-                box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.25);
-
-                &:hover {
-                    transform: scale(1.1, 1.1);
-                    // box-shadow: 0px 2px 10px 1px rgba(51, 12, 83, 0.8);
-                    // box-shadow: 0px 2px 10px 1px rgba(20, 109, 112, 0.8);
-                }
-
-                // media query for iframe
-                @media (max-width: 600px) {
-                    width: 100%;
-                }
-            }
-
-            // media query for div which includes iframes
-            @media (max-width: 569px) {
-                margin: 0.5rem;
-                padding: 0.5rem;
-            }
-        }
-    }
-
-
-
-
-}
-
-// header
+// header ====================================
 header {
     @include flex-box-row;
     flex-wrap: wrap;
@@ -104,10 +21,12 @@ header {
     background-color: #000;
     box-shadow: 1px 4px 5px -1px rgba(0,0,0,0.75);
 
+    // logo
     #logo {
         padding: 0.3rem 0.5rem;
     }
 
+    // menu
     .navbar {
         margin: 0 auto;
         font-size: 18px;
@@ -192,4 +111,119 @@ header {
             width: 95%;
          }
     }
+}
+
+// main ====================================
+main {
+    .box {
+        @include flex-box-column;
+        padding: 2rem 1rem;
+        align-items: center;
+        @include parallax();
+    }
+
+    // welcome section ======================
+    #welcome {
+        height: 90vh;
+        @include parallax();
+
+        background-color: rgb(35, 8, 85);
+        background-image: url("./img/gallery-img-4.png");
+        color: #fff;
+
+        h2 {
+            margin-top: 10rem;
+            font-size: 5em;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        h3 {
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        #info {
+            max-width: 43%;
+            font-weight: bold;
+            text-align: center;
+        }
+
+    }
+
+    // spotlight section ======================
+    #spotlight {
+        height: 50%;
+        @include parallax();
+
+        justify-content: space-around;
+        background-color: rgb(253, 251, 251);
+        background-image: url("./img/light-img.png");
+
+        
+        div {
+            @include flex-box-row;
+            flex-wrap: wrap;
+            margin: 1rem 2rem;
+            text-align: center;
+            color: #fff;
+
+            iframe {
+                box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.25);
+
+                &:hover {
+                    transform: scale(1.1, 1.1);
+                    // box-shadow: 0px 2px 10px 1px rgba(51, 12, 83, 0.8);
+                    // box-shadow: 0px 2px 10px 1px rgba(20, 109, 112, 0.8);
+                }
+
+                // media query for iframe
+                @media (max-width: 600px) {
+                    width: 100%;
+                }
+            }
+
+            // media query for div which includes iframes
+            @media (max-width: 569px) {
+                margin: 0.5rem;
+                padding: 0.5rem;
+            }
+        }
+    }
+
+
+    // gallery section ======================
+    #gallery {
+        max-height: 70%;
+        @include parallax();
+        background-color: rgb(15, 15, 15);
+
+        h2 {
+            color: #fff;
+        }
+
+        .gallery-box {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            img {
+                width: 25%;
+                margin: 1.5rem;
+                border-radius: 0.2em;
+
+                &:hover {
+                    transform: scale(1.1, 1.1);
+                    // box-shadow: 2px 7px 53px 1px rgba(126,19,214,1);
+                }
+
+                @media (max-width: 550px) {
+                    width: 45%;
+                    margin: 0.3rem;
+                }
+            }
+        }
+    }
+
+
 }
