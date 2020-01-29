@@ -332,7 +332,13 @@ main {
         height: 30vh;
         padding: 1rem;
         margin-bottom: 1rem;
+        color: #000;
         background-color: rgb(244, 239, 252);
+
+        h2 {
+            color: #000;
+            font-weight: bold;
+        }
 
         .bold {
             font-weight: bold;
