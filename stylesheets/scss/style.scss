@@ -226,4 +226,36 @@ main {
     }
 
 
+    // event section ======================
+    #events {
+        height: 75vh;
+        @include parallax();
+        background-color: #000;
+
+        h2 {
+            color: #fff;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .row-box {
+            @include flex-box-row;
+
+            div {
+                margin: 1rem;
+                padding: 1rem;
+                color: #fff;
+                background-color: rgba(41, 40, 40, 0.3);
+                box-shadow: $box-shadow-2;
+
+                img {
+                    box-shadow: $box-shadow-1;
+                }
+            }
+        }
+    }
+
+
 }
