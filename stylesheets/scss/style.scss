@@ -8,6 +8,38 @@
 
 html {
     font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(34, 33, 33);
+    background-image: url("img/ligths-1880x1280.jpeg");
+
+    h1, h2, h3 {
+        color: #fff;
+        text-transform: lowercase;
+    }
+
+    img {
+        border-radius: 0.2em;
+    }
+
+    .arrow-icon  {
+        font-size: 3rem;
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(255, 255, 255, 0);
+        
+        &:hover {
+            box-shadow: 2px 7px 93px 1px rgba(126,19,214,1);
+        }
+    }
+
+    .row-box{
+        @include flex-box-row;
+        flex-wrap: wrap;
+    }
 }
 
 // header ====================================
@@ -43,6 +75,10 @@ header {
                 text-decoration: none;
                 color: rgba(255, 255, 255, 0.7);
 
+                &.hover {
+                    color: $accent-color;
+                }
+
                 // media query for nav links
                 @media screen and (min-width: 858px) {
                     margin-left: 40px;
@@ -50,10 +86,8 @@ header {
 
                     &:hover {
                         color: $accent-color;
-                        color: rgba(255, 255, 255, 1);
                     }
                 }
-
             }
 
             li {
@@ -87,7 +121,7 @@ header {
                 color: $accent-color;
             }
 
-            // 
+            // media query for navbar toggle
             @media screen and (min-width: 858px) {
                 display: none;
             }
@@ -333,6 +367,10 @@ footer {
 
     #to-top-icon {
         margin-bottom: 1rem;
+    }
+
+    .club {
+        font-weight: bold;
     }
 
     .mail {
