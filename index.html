@@ -50,7 +50,7 @@
     <main>
         <!-- welcome -->
         <section class="img-box box" id="welcome">
-
+            <div id="overlay" class="home-img-overlay"></div>
             <!-- noscript -->
             <div class="noscript">
                 <noscript>
@@ -60,7 +60,7 @@
                 </noscript>
             </div>
 
-            <h2 class="animated slideInDown delay-2s">LTMD</h2>
+            <h2 data-aos="zoom-in" class="animated slideInDown delay-2s">LTMD</h2>
             <h3 data-aos="zoom-in">LESS TALKING ... MORE DANCING</h3>
             <div id="info" class="animated slideInDown delay-2s">
                 <p>
@@ -73,6 +73,8 @@
             <a href="#footer">
                 <i class="arrow-icon fas fa-angle-down"></i>
             </a>
+
+
         </section>
 
         <!-- spotlight -->
@@ -110,23 +112,77 @@
         <!-- events -->
         <section class="img-box box" id="events">
             <h2 class="events-h" data-aos="zoom-in">Events</h2>
-            <!-- <div class="row-box">
-                        <div>
-                            <h3>Event one</h3>
-                            <img src="img/event-1.jpg" alt="">
-                        </div>
-        
-                        <div>
-                            <h3>Event two</h3>
-                            <img src="img/event-2.jpg" alt="">
-                        </div>
-        
-                        <div>
-                            <h3>event three</h3>
-                            <img src="img/dance-3.png" alt="">
-                        </div>
+            <div class="row-box">
+                <!-- event one -->
+                <div class="event-box">
+                    <img src="img/event-01.png" alt="">
+                    <h3>GAV GAV 40H PAS</h3>
+                    <p class="date">31 Jan - 2 Feb 2020</p>
+                    <p class="time"></p>
+                    <p class="location">Petersburg Art Space Berlin</p>
+                    <p>Kaiserin-Augusta-Allee 101, 10553 Berlin</p>
+
+                    <button class="btn-event-info"><a href="https://www.facebook.com/events/496531650981874/"> more
+                            details </a></button>
+
+                    <!-- show / hide details -->
+                    <!-- <button>Details / Info</button>
+                    <div id="details">
+                        <p>
+                            PAS is organizing a series of long events that will happen 3 times a year
+                            9 rooms, performances, concerts, Dj, live acts , ecosexual expression, and freedom of
+                            movement.
+                        </p>
+                        <pre>
+                            DJs
+                            // Fonzy
+                            // Kaiser KuBa
+                            // Karoliina Pärnänen
+                            // KSTF
+                            // Lucas Mezian
+                        </pre>
                     </div> -->
+                </div>
+
+                <!-- event two -->
+                <!-- <div class="event-box">
+                    <img src="img/event-02.png" alt="">
+                    <h3>Thursday Madness w/ Ed2000</h3>
+                    <p class="date">9 Jan 2020</p>
+                    <p class="time">11:00 PM – 8:00 AM</p>
+                    <p class="location">Der Weiße Hase</p>
+                    <p>Revaler Str. 99, 10245 Friedrichshain Berlin</p>
+
+                    <button>
+                        <a href="https://www.facebook.com/events/465388040831871/"> more details </a>
+                    </button>
+
+                </div> -->
+
+                <!-- <iframe
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpg%2FLessTalkingMoreDancing%2Fevents%2F&tabs=496531650981874&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                    width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowTransparency="true" allow="encrypted-media"></iframe> -->
+
+                <div>
+                    <iframe
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpg%2FLessTalkingMoreDancing%2Fevents%2F&tabs=events&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                        width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                        allowTransparency="true" allow="encrypted-media">
+                    </iframe>
+
+                    <button id="btn-to-the-events">
+                        <a href="https://www.facebook.com/pg/LessTalkingMoreDancing/events/?ref=page_internal">
+                            see all our events on facebook
+                        </a>
+                    </button>
+
+                </div>
+
+
+            </div>
         </section>
+
 
         <!-- contact -->
         <section class="img-box box" id="contact">
@@ -174,6 +230,7 @@
 
     <!-- script -->
     <script src="js/nav.js"></script>
+    <script src="js/animation.js"></script>
     <script>
         // animation
         AOS.init({
