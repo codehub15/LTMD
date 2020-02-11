@@ -211,6 +211,11 @@ main {
             text-transform: uppercase;
             color: #fff;
             z-index: 1;
+
+            @media (max-width: 550px) {
+                margin: 3rem;
+                font-size: 3.5em;
+            }
         }
 
         h3 {
@@ -219,6 +224,11 @@ main {
             text-align: center;
             color: #fff;
             z-index: 1;
+
+            @media (max-width: 550px) {
+                padding: 1rem;
+                font-size: 2em;
+            }
         }
 
         #info {
@@ -243,18 +253,7 @@ main {
             left: 0;
             opacity: 0.7;
             background-color: #000;
-            //   background: rgb(6, 4, 56);
-            //   background: linear-gradient(
-            //     39deg,
-            //     rgba(6, 4, 56, 1) 11%,
-            //     rgba(22, 63, 196, 1) 18%,
-            //     rgba(61, 166, 75, 0.9836134282814688) 25%,
-            //     rgba(231, 215, 35, 0.9247898988697041) 35%,
-            //     rgba(45, 1, 69, 0.9976190305223652) 76%,
-            //     rgba(14, 4, 54, 1) 89%
-            //   );
         }
-
     }
 
     // spotlight section ======================
